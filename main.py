@@ -1,14 +1,21 @@
 import kivy
 kivy.require('2.0.0')
 
+# Base class of application inherits from App class
 from kivy.app import App
-from kivy.uix.label import Label
+from kivy.uix.widget import Widget
 
 
-class PingPong(App):
+class PingPong(Widget):
+    pass
 
+
+# Define base class of App
+class PongApp(App):
+
+    # Root widget
     def build(self):
-        return Label(text='Hello world')
+        return PingPong()
 
 
 if __name__ == '__main__':
