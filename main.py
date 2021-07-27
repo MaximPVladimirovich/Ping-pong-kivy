@@ -1,7 +1,4 @@
-from random import randint
-
 import kivy
-from Demos.mmapfile_demo import offset
 from kivy.properties import NumericProperty, ReferenceListProperty, Clock, ObjectProperty
 from kivy.vector import Vector
 
@@ -43,9 +40,9 @@ class PingPong(Widget):
     player2 = ObjectProperty(None)
 
     def on_touch_move(self, touch):
-        if touch.x < self.width/3:
+        if touch.x < self.width / 3:
             self.player1.center_y = touch.y
-        if touch.x > self.width - self.width/3:
+        if touch.x > self.width - self.width / 3:
             self.player2.center_y = touch.y
 
     def serve_ball(self, vel=(4, 0)):
@@ -55,23 +52,22 @@ class PingPong(Widget):
     def update(self, dt):
         self.ball.move()
 
-        #paddle bounce
+        # paddle bounce
         self.player1.bounce_ball(self.ball)
         self.player2.bounce_ball(self.ball)
 
         # bounce off top and bottom
-        if (self.ball.y <  self.y ) or (self.ball.top > self.top):
+        if (self.ball.y < self.y) or (self.ball.top > self.top):
             self.ball.velocity_y *= -1
 
         # bounce off left and right
-            # went of to a side to score point?
+        # went of to a side to score point?
         if self.ball.x < self.x:
             self.player2.score += 1
             self.serve_ball(vel=(4, 0))
         if self.ball.x > self.width:
             self.player1.score += 1
             self.serve_ball(vel=(-4, 0))
-        pass
 
 
 # Define base class of App
@@ -81,7 +77,8 @@ class PongApp(App):
     def build(self):
         game = PingPong()
         game.serve_ball()
-        Clock.schedule_interval(game.update, 1.0/60.0)
+        # Calls update function 60 times per second
+        Clock.schedule_interval(game.update, 1.0 / 60.0)
         return game
 
 
