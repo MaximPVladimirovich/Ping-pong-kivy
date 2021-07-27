@@ -25,6 +25,17 @@ class PongPaddle(Widget):
             ball.velocity = vel.x, vel.y + offset
 
 
+# Ball
+class PongBall(Widget):
+    # velocity of the ball on the x and y axis
+    velocity_x = NumericProperty(0)
+    velocity_y = NumericProperty(0)
+    velocity = ReferenceListProperty(velocity_x, velocity_y)
+
+    def move(self):
+        self.pos = Vector(*self.velocity) + self.pos
+
+
 # The game rules from pong.kv
 class PingPong(Widget):
     ball = ObjectProperty(None)
@@ -45,26 +56,22 @@ class PingPong(Widget):
         self.ball.move()
 
         #paddle bounce
+        self.player1.bounce_ball(self.ball)
+        self.player2.bounce_ball(self.ball)
 
         # bounce off top and bottom
-        if (self.ball.y < 0 ) or (self.ball.top > self.height):
+        if (self.ball.y <  self.y ) or (self.ball.top > self.top):
             self.ball.velocity_y *= -1
 
         # bounce off left and right
-        if (self.ball.x < 0) or (self.ball.right > self.width):
-            self.ball.velocity_x *= -1
+            # went of to a side to score point?
+        if self.ball.x < self.x:
+            self.player2.score += 1
+            self.serve_ball(vel=(4, 0))
+        if self.ball.x > self.width:
+            self.player1.score += 1
+            self.serve_ball(vel=(-4, 0))
         pass
-
-
-# Ball
-class PongBall(Widget):
-    # velocity of the ball on the x and y axis
-    velocity_x = NumericProperty(0)
-    velocity_y = NumericProperty(0)
-    velocity = ReferenceListProperty(velocity_x, velocity_y)
-
-    def move(self):
-        self.pos = Vector(*self.velocity) + self.pos
 
 
 # Define base class of App
