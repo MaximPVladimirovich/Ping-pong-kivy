@@ -10,7 +10,7 @@
 
 
 <PongPaddle>
-    size: 25, 130
+    size: 25, 100
     canvas:
         Rectangle:
             pos: self.pos
@@ -47,7 +47,7 @@
     PongPaddle:
         id: player_left
         x: root.x
-        center_y: root.center_y
+        center_y: root.ball.y
 
     PongPaddle:
         id: player_right

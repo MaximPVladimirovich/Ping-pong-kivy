@@ -45,7 +45,7 @@ class PingPong(Widget):
         if touch.x > self.width - self.width / 3:
             self.player2.center_y = touch.y
 
-    def serve_ball(self, vel=(4, 0)):
+    def serve_ball(self, vel=(3, 0)):
         self.ball.center = self.center
         self.ball.velocity = vel
 
