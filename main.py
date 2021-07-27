@@ -19,4 +19,4 @@ class PongApp(App):
 
 
 if __name__ == '__main__':
-    PingPong().run()
+    PongApp().run()
