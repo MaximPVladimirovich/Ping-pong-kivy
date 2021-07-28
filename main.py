@@ -15,9 +15,12 @@ class PongPaddle(Widget):
 
     def bounce_ball(self, ball):
         if self.collide_widget(ball):
+            # Initialize vx, vy from the ball velocity
             vx, vy = ball.velocity
             offset = (ball.center_y - self.center_y) / (self.height / 2)
+            print()
             bounced = Vector(-1 * vx, vy)
+            print(bounced)
             vel = bounced * 1.1
             ball.velocity = vel.x, vel.y + offset
 
@@ -29,6 +32,7 @@ class PongBall(Widget):
     velocity_y = NumericProperty(0)
     velocity = ReferenceListProperty(velocity_x, velocity_y)
 
+    # This moves the ball widget
     def move(self):
         self.pos = Vector(*self.velocity) + self.pos
 
@@ -40,8 +44,8 @@ class PingPong(Widget):
     player2 = ObjectProperty(None)
 
     def on_touch_move(self, touch):
-        if touch.x < self.width / 3:
-            self.player1.center_y = touch.y
+        # If user presses on paddle side it will move with mouse
+        # For two player duplicate code below for player1
         if touch.x > self.width - self.width / 3:
             self.player2.center_y = touch.y
 
