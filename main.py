@@ -21,7 +21,7 @@ class PongPaddle(Widget):
             print()
             bounced = Vector(-1 * vx, vy)
             print(bounced)
-            vel = bounced * 1.1
+            vel = bounced * 1.01
             ball.velocity = vel.x, vel.y + offset
 
 
@@ -49,7 +49,7 @@ class PingPong(Widget):
         if touch.x > self.width - self.width / 3:
             self.player2.center_y = touch.y
 
-    def serve_ball(self, vel=(3, 0)):
+    def serve_ball(self, vel=(3.3, 0)):
         self.ball.center = self.center
         self.ball.velocity = vel
 
@@ -74,10 +74,10 @@ class PingPong(Widget):
             self.serve_ball(vel=(-4, 0))
 
 
-# Define base class of App
+# Define base class of my application
 class PongApp(App):
 
-    # Root widget
+    # Instance of the root widget
     def build(self):
         game = PingPong()
         game.serve_ball()
