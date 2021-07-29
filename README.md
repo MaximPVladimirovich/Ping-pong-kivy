@@ -1,14 +1,13 @@
 # Ping-pong-game
 
-TODO: Write a project description
+For my last project at GA I decided to learn python and specifically and library. I decided on building the classic ping pong game using a library Called Kivy. 
 
 ## Installation
 
-TODO: Describe the installation process
+I do not have this project deployed anywhere...yet. The configuration process for android was a little tricky, but maybe I'll get there eventually. 
 
-## Usage
+If you would like to try this out just clone/fork the repo and go at it.
 
-TODO: Write usage instructions
 
 ## Contributing
 
@@ -23,9 +22,7 @@ TODO: Write usage instructions
 TODO: Write history
 
 ## Credits
-
-TODO: Write credits
+Build by: 
 
 ## License
 
-TODO: Write license
