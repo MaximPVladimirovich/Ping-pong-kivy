@@ -4,9 +4,10 @@ For my last project at GA I decided to learn python and specifically and library
 
 ## Installation
 
-I do not have this project deployed anywhere...yet. The configuration process for android was a little tricky, but maybe I'll get there eventually. 
-
-If you would like to try this out just clone/fork the repo and go at it.
+- Clone/Fork
+- Setup your python enviroment
+- import necassary packages
+- run the game!
 
 
 ## Contributing
