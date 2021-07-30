@@ -20,9 +20,10 @@ For my last project at GA I decided to learn python and specifically and library
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+## Built with
+[Kivy](https://kivy.org/#home)
 
-## Credits
-Built by: Maxim.bleeker@gmail.com 
+ 
 
 ## License
 
