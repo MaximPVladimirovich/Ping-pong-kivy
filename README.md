@@ -22,7 +22,8 @@ For my last project at GA I decided to learn python and specifically and library
 
 ## Built with
 [Kivy](https://kivy.org/#home) </br>
-[Python](https://www.python.org/)
+[Python](https://www.python.org/) </br>
+[PyCharm](https://www.jetbrains.com/help/pycharm/2021.2/quick-start-guide.html)
 
  
 
