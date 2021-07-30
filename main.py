@@ -1,6 +1,7 @@
 import kivy
 from kivy.properties import NumericProperty, ReferenceListProperty, Clock, ObjectProperty
 from kivy.vector import Vector
+from kivy.core.audio import Soundloader
 
 kivy.require('2.0.0')
 
