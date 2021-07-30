@@ -1,13 +1,16 @@
+import random
 import kivy
 from kivy.properties import NumericProperty, ReferenceListProperty, Clock, ObjectProperty
 from kivy.vector import Vector
-from kivy.core.audio import Soundloader
-
-kivy.require('2.0.0')
-
-# Base class of application inherits from App class
+from kivy.core.audio import SoundLoader
 from kivy.app import App
 from kivy.uix.widget import Widget
+kivy.require('2.0.0')
+
+sound1 = SoundLoader.load('sounds/Egg_Only_3.wav')
+sound2 = SoundLoader.load('sounds/Egg_Only_2.wav')
+sound3 = SoundLoader.load('sounds/Egg_Only_1.wav')
+sounds = [sound1, sound2, sound3]
 
 
 # paddle
@@ -16,7 +19,7 @@ class PongPaddle(Widget):
 
     def bounce_ball(self, ball):
         if self.collide_widget(ball):
-            # Initialize vx, vy from the ball velocity
+            random.choice(sounds).play()
             vx, vy = ball.velocity
             offset = (ball.center_y - self.center_y) / (self.height / 2)
             bounced = Vector(-1 * vx, vy)
