@@ -2,11 +2,13 @@
 
 For my last project at GA I decided to learn python and specifically and library. I decided on building the classic ping pong game using a library Called Kivy. 
 
+![Ping pong game](rdme/scrn1.png)
+
 ## Installation
 
 - Clone/Fork
 - Setup your python enviroment
-- import necassary packages
+- import necessary packages
 - run the game!
 
 
@@ -18,12 +20,9 @@ For my last project at GA I decided to learn python and specifically and library
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-TODO: Write history
 
 ## Credits
-Build by: 
+Built by: Maxim.bleeker@gmail.com 
 
 ## License
 
