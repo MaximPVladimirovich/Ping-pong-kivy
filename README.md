@@ -21,7 +21,7 @@ For my last project at GA I decided to learn python and specifically and library
 5. Submit a pull request :D
 
 ## Built with
-[Kivy](https://kivy.org/#home)
+[Kivy](https://kivy.org/#home) </br>
 [Python](https://www.python.org/)
 
  
