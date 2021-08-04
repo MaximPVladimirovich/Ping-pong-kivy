@@ -1,4 +1,4 @@
-# Ping-pong-game
+# Ping pong game
 
 For my last project at GA I decided to learn python and specifically and library. I decided on building the classic ping pong game using a library Called Kivy. 
 
